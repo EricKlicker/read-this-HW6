@@ -8,7 +8,7 @@
 
 #include "Circle.hpp"
 
-
+//create operators to compare 2 cirlce to eachother using different compenents of a circle
 int Circle::numberOfObjects =0;
 
 Circle::Circle()

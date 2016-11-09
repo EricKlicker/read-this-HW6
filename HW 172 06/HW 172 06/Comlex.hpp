@@ -12,6 +12,7 @@
 #include <stdio.h>
 using namespace std;
 
+//create a class
 class Complex
 {
 private:
@@ -35,6 +36,7 @@ public:
     double abs();
     string toString();
     
+    //create operator
     Complex& operator+=(Complex&);
     Complex& operator-=(Complex&);
     Complex& operator*=(Complex&);

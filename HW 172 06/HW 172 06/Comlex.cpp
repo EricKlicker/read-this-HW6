@@ -42,6 +42,7 @@ void Complex::setB(double newB)
 {
     b = newB;
 }
+//use operators to get values
 Complex Complex::add(Complex& c)
 {
     double newA = getA() + c.getA();

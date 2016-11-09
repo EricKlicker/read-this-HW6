@@ -19,7 +19,9 @@ void babyNames()
     string year;
     string gender;
     string name;
+    //read in the file with baby names 2010-2014
     string fileName = "Babynameranking.txt";
+    //have user enter the year because the computer needs to know which file to reaad
     cout << "Enter the year (2010-2014): ";
     cin >> year;
     cout << "Enter the gender (M/F): ";
@@ -27,6 +29,7 @@ void babyNames()
     cout << "Enter the name: ";
     cin >> name;
     
+    //let the user input the year and have this insert the year into the file name so it can read that file
     fileName.insert(fileName.size()-4, year);
     cout << fileName << endl;
     
@@ -46,6 +49,7 @@ void babyNames()
             string bnum;
             string gname;
             string gnum;
+            //read in boys name and number/girls name and number
             fileIO >> rank >> bname >> bnum >> gname >> gnum;
             if(gender == "M")
             {
@@ -71,7 +75,7 @@ void testCircleOperators()
 {
     Circle c1(5);
     Circle c2(10);
-    
+    //compare the cirlces to each other
     if(c1 < c2)
         cout << "The first circle is smaller than the second." << endl;
     if(c1 <= c2)
@@ -88,12 +92,14 @@ void testCircleOperators()
 
 void testComplex()
 {
+    //values of the complex numbers user will enter
     int A, B;
     int C, D;
     cout << "Enter the first complex number: ";
     cin >> A >> B;
     cout << "Enter the second complex number: ";
     cin >> C >> D;
+    //use function
     Complex c1(A, B);
     Complex c2(C, D);
     Complex c3 = c1.add(c2);
@@ -109,7 +115,7 @@ int main()
     
     output.open("Exercise13_1.txt");     //create a file
     srand(time(NULL));
-    
+    //generate 100 numbers and output them on the file
     int number = rand() % 100;
     for (int i = 0; i < 100; i++)
     {
@@ -126,6 +132,7 @@ int main()
     string fileName;
     char c;
     int count = -1;
+    //have user enter a file name
     cout << "Enter a file name: " << endl;
     cin >> fileName;
     
@@ -134,6 +141,7 @@ int main()
     if (input.fail())
         cout << fileName << " does not exist" << endl;
     else
+        //tells user if the file exists
         cout << fileName << " exists " << endl;
     
     while (!input.eof())
